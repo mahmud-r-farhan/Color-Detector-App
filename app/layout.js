@@ -28,9 +28,9 @@ export const metadata = {
     siteName: "Color Detector",
     images: [
       {
-        url: "./banner.jpg.png",
-        width: 512,
-        height: 512,
+        url: "/banner.jpg",
+        width: 1200,
+        height: 630,
         alt: "Color Detector Preview",
       },
     ],
@@ -42,29 +42,39 @@ export const metadata = {
     title: "Color Detector App",
     description:
       "Camera-based real-time color detection app with PWA support.",
-    creator: "@Mahmudur Rahman",
-    images: ["./banner.jpg"],
+    creator: "@devplus",
+    images: ["/banner.jpg"],
   },
   icons: {
-    icon: "./icons.png",
-    apple: "./icons.png",
+    icon: "/icons.png",
+    apple: "/apple-icon.png",
   },
-  themeColor: "#ffffff",
-  manifest: "/manifest.json",
+  themeColor: "#000000",
+  appleWebApp: {
+    title: "Color Detector",
+    statusBarStyle: "black-translucent",
+    capable: true,
+    startupImage: ["/splash.png"]
+  },
+  manifest: "/manifest.json", 
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
         <main>{children}</main>
       </body>
