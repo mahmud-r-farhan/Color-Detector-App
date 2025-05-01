@@ -120,7 +120,7 @@ export default function Home() {
       setHistory(prev => {
         if (prev.length > 0 && prev[0].hex === hex) return prev;
         const updated = [{ hex, name }, ...prev];
-        return updated.slice(0, 10); 
+        return updated.slice(0, 6); 
       });
     }, 500);
 
@@ -278,7 +278,7 @@ export default function Home() {
       {/* Color info display */}
       {cameraStatus === 'ready' && (
         <motion.div
-          className="absolute top-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl p-4 z-10"
+          className="absolute top-6 left-80 mx-6 -translate-x-1/1 bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl p-4 z-10"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -325,13 +325,13 @@ export default function Home() {
 
       {/* Color History */}
       {cameraStatus === 'ready' && history.length > 0 && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 bg-white/90 backdrop-blur-lg text-black rounded-xl p-4 shadow-xl">
+        <div className="absolute bottom-6 left-90 -mx-2 -translate-x-1/1 z-10 bg-white/90 backdrop-blur-lg text-black rounded-xl p-4 shadow-xl">
           <h3 className="text-sm font-bold mb-2">Recent Colors</h3>
           <div className="flex gap-3 overflow-x-auto pb-1 max-w-xs">
             {history.map((c, i) => (
               <div key={i} className="flex flex-col items-center">
                 <div
-                  className="w-10 h-10 rounded-lg shadow-sm cursor-pointer transition-transform hover:scale-110"
+                  className="w-10 h-10 rounded-lg shadow-sm cursor-pointer transition-transform hover:scale-101"
                   style={{ backgroundColor: c.hex }}
                   onClick={() => {
                     setColor(c.hex);

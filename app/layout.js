@@ -47,7 +47,7 @@ export const metadata = {
   },
   icons: {
     icon: "/icons.png",
-    apple: "/apple-icon.png",
+    apple: "/icons.png",
   },
   themeColor: "#000000",
   appleWebApp: {
