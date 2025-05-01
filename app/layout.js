@@ -24,11 +24,11 @@ export const metadata = {
     title: "Color Detector App",
     description:
       "Use your camera to detect colors in real time. Get color names, hex values, and more.",
-    url: "https://devplus.fun",
+    url: "https://color-detector-app.vercel.app/",
     siteName: "Color Detector",
     images: [
       {
-        url: "/banner.jpg",
+        url: "\banner.jpg",
         width: 1200,
         height: 630,
         alt: "Color Detector Preview",

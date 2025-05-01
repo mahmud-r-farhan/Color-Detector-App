@@ -1,5 +1,5 @@
 
-# Color Detector PWA Documentation
+# Color Detector Camera PWA
 
 Welcome to the Color Detector PWA, a modern Progressive Web App designed to detect colors in real-time using your device's camera. This app provides color names, hexadecimal values, and a suite of user-friendly features, all wrapped in a sleek, responsive interface. Built with cutting-edge technologies like React, TailwindCSS, Framer Motion, and JavaScript, this app is installable, offline-capable, and optimized for both mobile and desktop devices.   
 
